@@ -151,7 +151,7 @@ function alertaborrar()
 function alertalimpiar()
 {
     Toastify({
-        text: "TABLA LIMPIADA",
+        text: "REALIZADO",
         duration: 3000,
         gravity: "top", // `top` or `bottom`
         position: "right", // `left`, `center` or `right`
@@ -187,7 +187,6 @@ function guardar()
     calcr();
     drawsaldo();
     productosr = [];
-    // limpiar();
     document.getElementById("f-borrar").removeAttribute('disabled');
 }
 
