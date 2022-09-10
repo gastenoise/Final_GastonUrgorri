@@ -1,4 +1,4 @@
-const producto = {dia:null,hora:null,detalle:null,precio:null,cantidad:null,pneto:0,piva:0,pfinal:0,des:null};
+const producto = {dia:"",hora:"",detalle:"",precio:0,cantidad:0,pneto:0,piva:0,pfinal:0,des:0};
 const productos = [];
 var productosr = [];
 
@@ -60,8 +60,12 @@ function calcctotal ()
 
 function calcr ()
 {
-    productosr.forEach(element => { ptotalr += element.pfinal; });
-    ctotalr += productosr.filter(element => element.pfinal > '0').length;
+    if(productosr === null){
+    }
+    else{
+        productosr.forEach(element => { ptotalr += element.pfinal; });
+        ctotalr += productosr.filter(element => element.pfinal > '0').length;
+    }
 }
 
 function booleantosi (input)
@@ -159,7 +163,11 @@ function alertalimpiar()
 
 function drawsaldo()
 {
+    if(diayhorar === null){
+    }
+    else{
     totalr.innerHTML = `<a>saldo guardado: $${ptotalr} en ${ctotalr} productos</a><br><a style="font-size:15px;color:antiquewhite;">al día ${diayhorar.dia} a las ${diayhorar.hora} horas</a>`;
+    }
 }
 
 function limpiar()
