@@ -60,8 +60,12 @@ function calcctotal ()
 
 function calcr ()
 {
-    productosr.forEach(element => { ptotalr += element.pfinal; });
-    ctotalr += productosr.filter(element => element.pfinal > '0').length;
+    if(localStorage.getItem("productos") ===null){
+    }
+    else{
+        productosr.forEach(element => { ptotalr += element.pfinal; });
+        ctotalr += productosr.filter(element => element.pfinal > '0').length;
+    }
 }
 
 function booleantosi (input)
