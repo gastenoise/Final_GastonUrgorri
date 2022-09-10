@@ -187,7 +187,7 @@ function guardar()
     calcr();
     drawsaldo();
     productosr = [];
-    limpiar();
+    // limpiar();
     document.getElementById("f-borrar").removeAttribute('disabled');
 }
 
